@@ -23,6 +23,7 @@ void LCD_Clear(void);
 void LCD_String(char *str); 
 void LCD_String_xy(char row, char pos, char *str);
 
+void ADC_Init();
 
 
 #endif /*LCD_H_ */
