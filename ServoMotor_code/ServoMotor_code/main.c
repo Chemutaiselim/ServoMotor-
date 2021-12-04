@@ -24,10 +24,13 @@ char buffer1[20];
  void setup(){ /* GPIO setup */ 
 	 DDRB |= (1<<PB3); // Make OC0 pin as Output 
 	 /* PWM setup */ 
-	 TCCR0 = (1<<WGM00)|(1<<WGM01)|(1<<COM01)|(1<<CS02); // Set Fast PWM with Fosc/256 Timer0 clock }
+	 TCCR0 = (1<<WGM00)|(1<<WGM01)|(1<<COM01)|(1<<CS02); // Set Fast PWM with Fosc/256 Timer0 clock 
+	 
+}
 	 
 	 
-int main(void){ setup(); // Initialize PWM 
+int main(void){ 
+	setup(); // Initialize PWM 
 	ADC_Init(); // Initialize ADC 
 	LCD_Init(); // Initialize LCD 
 	while(1){
